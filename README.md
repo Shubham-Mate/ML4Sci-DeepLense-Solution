@@ -20,13 +20,11 @@ This repository contains my solutions to the technical tests for the DeepLense p
 ### Task I: Multi-Class Classification
 
 #### Approach
-- Implemented two approaches:
-  1. Custom CNN architecture designed for gravitational lensing images
-  2. Fine-tuned ResNet model with transfer learning
+- Implemented by fine-tuning of ResNet model
 - Compared performance using ROC curves and AUC scores
 
 #### Results
-[Brief summary of your best results with key metrics]
+- ROC-AUC Score: 0.9738
 
 ### Task III.A: Simulated Image Super-Resolution
 
@@ -77,5 +75,4 @@ Compared models using:
 | ESPCN         | **35.39417348870955** | **0.8734989364941915** | 0.0007788492572823694 |
 | SRResNet      | 35.24461601752956 | 0.8417196949323018 | 0.0007827904955775011 |
 
-#### Results
 
