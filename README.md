@@ -20,6 +20,7 @@ This repository contains my solutions to the technical tests for the DeepLense p
 ### Task I: Multi-Class Classification
 
 #### Approach
+
 - Implemented by fine-tuning of ResNet model
 - Compared performance using ROC curves and AUC scores
 
@@ -74,5 +75,7 @@ Compared models using:
 | SRCNN-large   | 35.21323692730531 | 0.8576015591621399 | **0.0007645150971560118** |
 | ESPCN         | **35.39417348870955** | **0.8734989364941915** | 0.0007788492572823694 |
 | SRResNet      | 35.24461601752956 | 0.8417196949323018 | 0.0007827904955775011 |
+
+
 
 
