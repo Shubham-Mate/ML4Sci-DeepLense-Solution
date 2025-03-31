@@ -14,6 +14,9 @@ This repository contains my solutions to the technical tests for the DeepLense p
 - **Task III.A**: Train a deep learning-based super resolution algorithm of your choice to upscale low-resolution strong lensing images using the provided high-resolution samples as ground truths.
 - **Task III.B**: Train a deep learning-based super-resolution algorithm of your choice to enhance low-resolution strong lensing images using a limited dataset of real HR/LR pairs collected from HSC and HST telescopes.
 
+### Task IV: Diffusion Models for Gravitational Lensing Simulation
+Develop a generative model to simulate realistic strong gravitational lensing images using diffusion models (DDPM). Implement and evaluate various architectural choices within the diffusion framework.
+
 
 ## Solution
 
@@ -75,6 +78,24 @@ Compared models using:
 | SRCNN-large   | 35.21323692730531 | 0.8576015591621399 | **0.0007645150971560118** |
 | ESPCN         | **35.39417348870955** | **0.8734989364941915** | 0.0007788492572823694 |
 | SRResNet      | 35.24461601752956 | 0.8417196949323018 | 0.0007827904955775011 |
+
+
+### Task 4:
+
+#### Approach
+- Used a cosine scheduler to add noise during forward diffusion process
+- Used a U-Net architecture with residual connection to predict the added noise during backward diffusion process
+
+#### Evaluation Metrics
+-  Fréchet Inception Distance (FID)
+
+#### Results:
+- FID = **0.04538939893245697**
+
+#### Saved Weights:
+- link: [Model Weights](https://drive.google.com/file/d/1iLRwvWrmS2kKMosVNYsuLSGjakoVph9l/view?usp=sharing)
+
+**Note**: This task has 2 notebooks, 1st notebook has model trained till 15 epochs and then checkpointed, while second notebook continues training that checkpointed model for 8 more epochs. This was done because of switching between different cloud platforms due to compute limitations
 
 
 
