@@ -10,6 +10,9 @@ This repository contains my solutions to the technical tests for the DeepLense p
 2. Subhalo substructure
 3. Vortex substructure
 
+### Task II: Lens Finding
+Build a model identifying lenses using PyTorch or Keras.
+
 ### Task III: Image Super-Resolution
 - **Task III.A**: Train a deep learning-based super resolution algorithm of your choice to upscale low-resolution strong lensing images using the provided high-resolution samples as ground truths.
 - **Task III.B**: Train a deep learning-based super-resolution algorithm of your choice to enhance low-resolution strong lensing images using a limited dataset of real HR/LR pairs collected from HSC and HST telescopes.
@@ -29,6 +32,31 @@ Develop a generative model to simulate realistic strong gravitational lensing im
 
 #### Results
 - ROC-AUC Score: 0.9738
+
+### Task II: Lens Finding
+
+#### Approach
+- Implemented a custom CNN architecture
+- Fine-tuned a pretrained ResNet-18 Model
+- Utilized Upsampling and downsampling to deal with class imbalances
+
+#### Metrics
+- AUC score
+- Plotting of ROC curve (Can be found in the notebook)
+- Accuracy
+
+#### Results
+This table is for AUC scores
+
+| Model                  | Unmodified Dataset | Downsampling      | Upsampling         |
+|------------------------|--------------------|-------------------|--------------------|
+| LensCNN                | 0.9762768782660841 | 0.960415291039809 | 0.9725461123302295 |
+| ResNet-18 (finetuned)  | 0.9813188884276008 | 0.977040639477031 | **0.9821499976935598** |
+
+
+#### Future work
+- Look into image specific techniques for dealing with class imbalances
+- Utilize larger pretrained models
 
 ### Task III.A: Simulated Image Super-Resolution
 
@@ -78,6 +106,11 @@ Compared models using:
 | SRCNN-large   | 35.21323692730531 | 0.8576015591621399 | **0.0007645150971560118** |
 | ESPCN         | **35.39417348870955** | **0.8734989364941915** | 0.0007788492572823694 |
 | SRResNet      | 35.24461601752956 | 0.8417196949323018 | 0.0007827904955775011 |
+
+#### Future Work
+- Look into diffusion model based approaches
+- Look into training larger model
+- Implement a special augmentation technique called CutBlur, which is designed for Image Super-Resolution
 
 
 ### Task 4:
